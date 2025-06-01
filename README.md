@@ -3,6 +3,9 @@
 ## Project Overview
 This application is designed for Pet Boarding and Grooming (Pet BAG), a local pet boarding and grooming business. The software aims to modernize operations by replacing inefficient paper-based processes with a digital solution for pet check-in and check-out.
 
+## Object-Oriented Programming Approach
+In developing the Pet Boarding and Grooming application, I've applied key object-oriented programming principles to ensure a robust and maintainable codebase. Encapsulation is implemented by making all attributes private with public getters and setters, which protects the data integrity and provides controlled access to the Pet class's internal state. The design leverages inheritance potential through a well-structured class hierarchy, allowing for future extension with specialized pet types or services. Abstraction is achieved by hiding implementation details and exposing only necessary functionality through clean interfaces, while the system is designed with polymorphism in mind for handling different pet types uniformly. This approach ensures the application is not only functional but also scalable, maintainable, and aligned with industry best practices.
+
 ## Project Structure
 ```
 Pet-Boarding-App/
