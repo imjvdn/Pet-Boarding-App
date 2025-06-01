@@ -43,5 +43,4 @@ ehthumbs.db
 Thumbs.db
 
 # HTML test files (if not part of the actual project)
-# Uncomment if you don't want to track these
-# src/PetTest.html
+src/PetTest.html
