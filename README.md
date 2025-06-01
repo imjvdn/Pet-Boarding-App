@@ -37,6 +37,3 @@ The project includes comprehensive test files to verify the functionality of the
 - **TEST_RESULTS.md**: Documents expected test results and behavior
 
 All tests have been run and verified to ensure the Pet class meets the requirements specified in the UML diagram.
-
-## Development Team
-Developed by Jadan Morrow.
