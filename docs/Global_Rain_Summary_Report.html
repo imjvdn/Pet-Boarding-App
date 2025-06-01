@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Global Rain Summary Report</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 40px;
+  max-width: 800px;
+}
+h1, h2, h3 {
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+pre {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+</style>
+</head>
+<body>
+<h1>Global Rain Summary Report</h1>
+
+<h2>Pet Boarding and Grooming (Pet BAG) Application</h2>
+
+<h3>Pseudocode for Pet Check-In Method</h3>
+
+<pre><code>FUNCTION checkInPet(pet)
+    // Validate pet information
+    IF pet.petName is empty OR pet.petType is empty THEN
+        DISPLAY "Error: Pet name and type are required"
+        RETURN false
+    END IF
+    
+    // Check available spaces based on pet type
+    IF pet.petType equals "Dog" THEN
+        IF availableDogSpaces > 0 THEN
+            DECREMENT availableDogSpaces
+            SET pet.dogSpaces to 1
+        ELSE
+            DISPLAY "Error: No dog spaces available"
+            RETURN false
+        END IF
+    ELSE IF pet.petType equals "Cat" THEN
+        IF availableCatSpaces > 0 THEN
+            DECREMENT availableCatSpaces
+            SET pet.catSpaces to 1
+        ELSE
+            DISPLAY "Error: No cat spaces available"
+            RETURN false
+        END IF
+    ELSE
+        DISPLAY "Error: Invalid pet type"
+        RETURN false
+    END IF
+    
+    // Calculate amount due based on stay duration and services
+    SET baseCost to pet.daysStay * dailyRate
+    
+    IF pet.grooming equals true THEN
+        SET groomingCost to groomingRate
+    ELSE
+        SET groomingCost to 0
+    END IF
+    
+    SET pet.amountDue to baseCost + groomingCost
+    
+    // Add pet to the system
+    ADD pet to petRegistry
+    
+    DISPLAY "Pet successfully checked in"
+    RETURN true
+END FUNCTION</code></pre>
+
+<h3>Flowchart for Pet Check-In Method</h3>
+
+<p><img src="https://i.imgur.com/mUAft3x.png" alt="Pet Check-In Process Flowchart"></p>
+
+<p><em>This flowchart visualizes the pet check-in process as described in the pseudocode, including validation of pet information, checking for available spaces, calculating costs, and registering the pet in the system.</em></p>
+
+<h3>OOP Principles Explanation</h3>
+
+<p>In developing the Pet class for the Pet BAG application, I applied key object-oriented programming principles including encapsulation and inheritance. Encapsulation was implemented by making all attributes private and providing public accessor and mutator methods, which protects the data from unauthorized access and maintains data integrity. The class structure follows the UML diagram specifications, allowing for future inheritance where specialized pet types (like Dog or Cat) could extend the base Pet class. This approach promotes code reusability, maintainability, and a clear separation of concerns, which are fundamental aspects of object-oriented design.</p>
+
+</body>
+</html>
