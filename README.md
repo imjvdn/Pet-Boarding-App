@@ -39,4 +39,4 @@ The project includes comprehensive test files to verify the functionality of the
 All tests have been run and verified to ensure the Pet class meets the requirements specified in the UML diagram.
 
 ## Development Team
-This project is being developed by Global Rain, a software engineering company specializing in custom software design and development.
+Developed by Jadan Morrow.
