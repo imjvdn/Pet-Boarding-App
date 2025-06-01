@@ -9,29 +9,154 @@ body {
   margin: 40px;
   max-width: 800px;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #333;
+}
+h1 {
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+h3 {
+  margin-top: 25px;
 }
 img {
   max-width: 100%;
   height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
 }
 pre {
   background-color: #f5f5f5;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   overflow-x: auto;
   white-space: pre-wrap;
+  border-left: 4px solid #007bff;
 }
 code {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+.metadata {
+  background-color: #f8f9fa;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  border-left: 4px solid #28a745;
+}
+.note {
+  background-color: #fff3cd;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  border-left: 4px solid #ffc107;
+}
+.implementation-note {
+  background-color: #d1ecf1;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border-left: 4px solid #17a2b8;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 </style>
 </head>
 <body>
 <h1>Global Rain Summary Report</h1>
 
-<h2>Pet Boarding and Grooming (Pet BAG) Application</h2>
+<div class="metadata">
+  <strong>Project:</strong> Pet Boarding and Grooming (Pet BAG) Application<br>
+  <strong>Client:</strong> Pet Boarding and Grooming (Pet BAG)<br>
+  <strong>Developer:</strong> Jadan Morrow<br>
+  <strong>Date:</strong> May 31, 2025<br>
+  <strong>Version:</strong> 1.0
+</div>
+
+<h2>Executive Summary</h2>
+<p>This report summarizes the development work completed for the Pet Boarding and Grooming (Pet BAG) application. The primary goal of this initial phase was to design and implement the foundational Pet class according to the provided UML specifications, and to develop the logic for the pet check-in process. This document includes pseudocode, a flowchart, and an explanation of the object-oriented programming principles applied in the implementation.</p>
+
+<h2>Project Overview</h2>
+<p>Pet Boarding and Grooming (Pet BAG) is a local business seeking to modernize its operations by replacing inefficient paper-based processes with a digital solution. The application will initially focus on two key functional areas: pet check-in and pet check-out. This report focuses on the Pet class implementation and the pet check-in process.</p>
+
+<h2>Class Implementation</h2>
+<h3>Pet Class Overview</h3>
+<p>The Pet class serves as the foundation of the Pet BAG application, encapsulating all essential information about pets being boarded at the facility. This class was implemented according to the UML specifications provided by Global Rain, with careful attention to proper encapsulation and documentation.</p>
+
+<div class="implementation-note">
+  <strong>Implementation Note:</strong> The Pet class is designed to be extensible, allowing for future specialized pet types (e.g., Dog, Cat) to inherit from it while maintaining a consistent interface for the application.
+</div>
+
+<h3>Key Attributes</h3>
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Data Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>petType</td>
+    <td>String</td>
+    <td>Type of pet (e.g., "Dog", "Cat")</td>
+  </tr>
+  <tr>
+    <td>petName</td>
+    <td>String</td>
+    <td>Name of the pet</td>
+  </tr>
+  <tr>
+    <td>petAge</td>
+    <td>int</td>
+    <td>Age of the pet in years</td>
+  </tr>
+  <tr>
+    <td>dogSpaces</td>
+    <td>int</td>
+    <td>Number of dog spaces assigned</td>
+  </tr>
+  <tr>
+    <td>catSpaces</td>
+    <td>int</td>
+    <td>Number of cat spaces assigned</td>
+  </tr>
+  <tr>
+    <td>daysStay</td>
+    <td>int</td>
+    <td>Duration of stay in days</td>
+  </tr>
+  <tr>
+    <td>amountDue</td>
+    <td>double</td>
+    <td>Total cost for boarding and services</td>
+  </tr>
+  <tr>
+    <td>grooming</td>
+    <td>boolean</td>
+    <td>Whether grooming service is requested</td>
+  </tr>
+</table>
+
+<h3>Check-In Process</h3>
+<p>The check-in process is a critical component of the Pet BAG application, ensuring that pets are properly registered and that space availability is accurately tracked. The following pseudocode and flowchart detail the logic for this process.</p>
 
 <h3>Pseudocode for Pet Check-In Method</h3>
 
@@ -88,9 +213,63 @@ END FUNCTION</code></pre>
 
 <p><em>This flowchart visualizes the pet check-in process as described in the pseudocode, including validation of pet information, checking for available spaces, calculating costs, and registering the pet in the system.</em></p>
 
-<h3>OOP Principles Explanation</h3>
+<h2>Object-Oriented Programming Principles</h2>
 
-<p>In developing the Pet class for the Pet BAG application, I applied key object-oriented programming principles including encapsulation and inheritance. Encapsulation was implemented by making all attributes private and providing public accessor and mutator methods, which protects the data from unauthorized access and maintains data integrity. The class structure follows the UML diagram specifications, allowing for future inheritance where specialized pet types (like Dog or Cat) could extend the base Pet class. This approach promotes code reusability, maintainability, and a clear separation of concerns, which are fundamental aspects of object-oriented design.</p>
+<p>In developing the Pet class for the Pet BAG application, I applied several key object-oriented programming principles to ensure the code is robust, maintainable, and extensible. Below is a detailed explanation of how these principles were implemented:</p>
+
+<h3>Encapsulation</h3>
+<p>Encapsulation is the bundling of data and methods that operate on that data within a single unit (class), and restricting direct access to some of the object's components. This principle was implemented in the Pet class by:</p>
+<ul>
+  <li><strong>Private Attributes:</strong> All class attributes (petType, petName, petAge, etc.) were declared as private, preventing direct access from outside the class.</li>
+  <li><strong>Public Accessor Methods:</strong> Getter methods were implemented for all attributes, providing controlled read access.</li>
+  <li><strong>Public Mutator Methods:</strong> Setter methods were implemented with appropriate validation to ensure data integrity.</li>
+</ul>
+
+<div class="implementation-note">
+  <strong>Code Example:</strong> The Pet class implements encapsulation by making attributes private and providing public getters and setters:
+  <pre><code>private String petName;
+
+public String getPetName() {
+    return petName;
+}
+
+public void setPetName(String petName) {
+    this.petName = petName;
+}</code></pre>
+</div>
+
+<h3>Inheritance</h3>
+<p>While not explicitly implemented in this phase, the Pet class was designed with inheritance in mind. The class structure allows for future specialized pet types (like Dog or Cat) to extend the base Pet class, inheriting its attributes and methods while adding type-specific functionality.</p>
+
+<h3>Abstraction</h3>
+<p>Abstraction involves hiding complex implementation details and showing only the necessary features of an object. The Pet class provides a clean interface through its methods, abstracting away the internal details of how pet data is stored and processed.</p>
+
+<h3>Polymorphism</h3>
+<p>The design of the Pet class supports future polymorphic behavior, where specialized pet types could override methods like calculating boarding costs based on pet-specific requirements.</p>
+
+<h2>Future Considerations</h2>
+
+<h3>Planned Enhancements</h3>
+<p>As the Pet BAG application evolves, several enhancements are planned to extend its functionality:</p>
+<ul>
+  <li><strong>Specialized Pet Classes:</strong> Implementing Dog and Cat classes that inherit from the Pet base class to handle type-specific requirements.</li>
+  <li><strong>Validation Improvements:</strong> Adding more robust validation for pet attributes to ensure data integrity.</li>
+  <li><strong>Service Customization:</strong> Expanding the grooming options to include different service levels and pet-specific treatments.</li>
+  <li><strong>Space Management:</strong> Implementing a more sophisticated system for tracking and allocating boarding spaces.</li>
+</ul>
+
+<h3>Technical Debt Considerations</h3>
+<p>The current implementation has been designed to minimize technical debt, but some areas for future improvement include:</p>
+<ul>
+  <li>Implementing comprehensive exception handling for edge cases</li>
+  <li>Adding unit tests to ensure code reliability during future modifications</li>
+  <li>Considering design patterns like Factory or Strategy for managing different pet types</li>
+</ul>
+
+<h2>Conclusion</h2>
+<p>The implementation of the Pet class and the check-in process logic provides a solid foundation for the Pet BAG application. By adhering to object-oriented programming principles, the code is structured to be maintainable, extensible, and robust. The pseudocode and flowchart for the check-in process demonstrate a comprehensive approach to handling the business logic requirements.</p>
+
+<p>As development continues, the application will evolve to include more features while maintaining the clean design principles established in this initial phase.</p>
 
 </body>
 </html>
